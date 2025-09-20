@@ -15,11 +15,11 @@ This project implements two designs for a programmable frequency synthesizer usi
 ## Gallery
 | TTL Synthesizer (Simulation) | PIC Synthesizer (PCB Design) |
 | :---: | :---: |
-| [![Simulation](simulations/results/ttl-sim-thumb.png)](simulations/results/ttl-sim.png) | [![PCB](hardware/pcb/pcb-design-thumb.png)](hardware/pcb/pcb-design.png) |
+| [![Simulation](simulations/results/ttl-sim.png)](simulations/results/ttl-sim.png) | [![PCB](hardware/pcb/pcb-design.png)](hardware/pcb/pcb-design.png) |
 
 | Oscilloscope Results (Physical Test) |
 | :---: |
-| [![Scope](media/oscilloscope-1-thumb.jpg)](media/oscilloscope-1.jpg) |
+| [![Scope](media/oscilloscope-1.jpg)](media/oscilloscope-1.jpg) |
 
 ## Project Structure
 ```
