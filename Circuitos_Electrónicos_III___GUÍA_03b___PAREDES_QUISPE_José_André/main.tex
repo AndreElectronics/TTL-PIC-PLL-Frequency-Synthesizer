@@ -1,0 +1,81 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage[top=2cm, bottom=3cm, left=2cm, right=2cm]{geometry}
+
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx,wrapfig,amsmath,pdfpages,verbatim}
+\usepackage{enumitem}
+\usepackage{tabularx, arydshln}
+\usepackage{float, subcaption}
+\usepackage{multirow, multicol}
+\usepackage{fancyhdr}
+\usepackage{zref-totpages}
+\usepackage{minted}
+\usepackage{tcolorbox}
+\usepackage{framed}
+\usepackage{xcolor}
+\usepackage{xassoccnt}
+\usepackage{pdfpages}
+\usepackage{hyperref}
+\usepackage{datetime,calc,tokcycle}
+\Characterdirective{\addcytoks{#1\ }}
+
+\newcommand{\customtoday}{
+  {\the\year.\twodigit{\the\month}.\twodigit{\the\day}}
+  \the\cytoks\unskip}
+
+\newcounter{realpage}
+\DeclareAssociatedCounters{page}{realpage}
+\AtBeginDocument{%
+  \stepcounter{realpage}
+}
+
+% Minted settings.
+\setminted{fontsize=\footnotesize, baselinestretch=1.5}
+\usemintedstyle{borland}
+
+% \newcommand{}[]{}
+\renewcommand\tabularxcolumn[1]{m{#1}}
+\newcolumntype{Y}{>{\centering\arraybackslash}X}
+\newcolumntype{A}{>{\hsize=0.2\textwidth}Y}
+\newcolumntype{B}{>{\hsize=0.3\textwidth}Y}
+
+\pagestyle{fancy}
+\pagenumbering{gobble}
+\fancyhead{}
+\fancyhead[L]{\fontsize{8}{12} \selectfont GUIA DE LABORATORIO 06}
+\fancyhead[C]{\fontsize{8}{12} \selectfont INGENIERÍA DE CONTROL I}
+\fancyhead[R]{\fontsize{8}{12} \selectfont PAG \therealpage/\ztotpages}
+\fancypagestyle{titulo}
+{
+    \fancyhead{}
+    \fancyhead[C]{\input{0. HEADER}}
+    \newgeometry{bottom=4cm, left=2cm, right=2cm}
+    \setlength{\headheight}{129.853pt}
+    \renewcommand{\headrulewidth}{0pt}
+}
+
+\allowdisplaybreaks
+
+\renewcommand{\theenumi}{\alph{enumi}}
+
+\begin{document}
+
+\thispagestyle{titulo}
+\begin{center}
+{\large EXPERIENCIA N$^o$1 MULTIVIBRADORES Y CIRCUITOS RESONANTES}
+\end{center}
+
+{\Large \href{https://drive.google.com/drive/folders/1fvojh8YbbdQwtmJNgBLz1jIMM7Ws86qz?usp=sharing}{VIDEO EXPLICATIVO}}
+
+\input{1. OBJETIVO}
+\input{2. MARCO TEÓRICO}
+\input{3. INFORME PREVIO}
+\input{4. MATERIAL Y EQUIPO}
+\input{5. PROCEDIMIENTO}
+\input{6. TAREAS COMPLEMENTARIAS}
+\input{7. CUESTIONARIO FINAL}
+\input{8. CONCLUSIONES Y OBSERVACIONES}
+\input{9. BIBLIOGRAFÍA}
+\input{10. ANEXOS}
+
+\end{document}
